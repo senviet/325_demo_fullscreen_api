@@ -21,3 +21,13 @@ function exitFullscreen() {
         document.webkitExitFullscreen();
     }
 }
+
+document.addEventListener("fullscreenchange", function (e) {
+    console.log(document.fullscreen);
+});
+document.addEventListener("mozfullscreenchange", function (e) {
+    console.log(document.mozFullScreen);
+});
+document.addEventListener("webkitfullscreenchange", function (e) {
+    console.log(document.webkitIsFullScreen);
+});
